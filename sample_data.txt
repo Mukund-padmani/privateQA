@@ -1,0 +1,16 @@
+# The Nebula X-1 Smartwatch
+
+## Overview
+The Nebula X-1 is the latest smartwatch from GalaxyTech, released in October 2025. It features a 1.5-inch AMOLED display with a resolution of 450x450 pixels. The watch is designed for both fitness enthusiasts and business professionals.
+
+## Key Features
+1. **Battery Life**: The X-1 boasts a 7-day battery life on a single charge, thanks to its new energy-efficient G-Core processor.
+2. **Health Monitoring**: It includes a heart rate monitor, SpO2 sensor, and a new stress tracking algorithm that analyzes skin temperature and heart rate variability.
+3. **Water Resistance**: Rated at 5ATM, making it suitable for swimming and showering.
+4. **Connectivity**: Supports Bluetooth 5.3, Wi-Fi 6, and NFC for contactless payments via GalaxyPay.
+
+## Pricing and Availability
+The Nebula X-1 is priced at $299 for the standard model and $399 for the Titanium edition. It is available in three colors: Midnight Black, Starlight Silver, and Deep Ocean Blue.
+
+## Warranty
+GalaxyTech offers a 2-year limited warranty covering manufacturing defects. Accidental damage is not covered unless the user purchases the GalaxyCare+ plan for an additional $49.

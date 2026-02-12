@@ -1,0 +1,27 @@
+# remoteWork_policy_2025.txt
+
+## Remote Work Policy
+
+### 1. Purpose
+This policy outlines the guidelines for employees who wish to work from home or other remote locations.
+
+### 2. Eligibility
+- Full-time employees who have completed their probation period (3 months) are eligible.
+- Roles that require physical presence (e.g., security, hardware maintenance) are not eligible.
+
+### 3. Work Hours
+- Employees must be available during core hours: 10:00 PM to 4:00 AM EST.
+- Total work hours must remain 40 hours per week.
+
+### 4. Equipment
+- The company will provide a laptop and a headset.
+- Employees are responsible for their own internet connection (minimum 50 Mbps required).
+- A one-time stipend of $500 is available for home office setup (monitor, chair, etc.).
+
+### 5. Communication
+- Daily stand-up meetings are mandatory at 9:30 AM via Zoom.
+- Slack status must be updated to "Away" during breaks.
+
+### 6. Security
+- Use of the company VPN is mandatory when accessing internal servers.
+- Work devices must not be used for personal tasks.

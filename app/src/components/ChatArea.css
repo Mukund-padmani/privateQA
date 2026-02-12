@@ -1,0 +1,252 @@
+/* ChatArea.css */
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+    /* Prevent scrolling of container */
+}
+
+.messages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    scroll-behavior: smooth;
+    margin-top: 50px;
+    /* Space for the hamburger on mobile */
+}
+
+/* On Desktop - hide the hamburger space */
+@media (min-width: 769px) {
+    .messages-list {
+        margin-top: 0;
+    }
+}
+
+.empty-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0.5;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* New Message Row Layout */
+.message-row {
+    display: flex;
+    gap: var(--space-md);
+    max-width: 80%;
+}
+
+@media (max-width: 768px) {
+    .message-row {
+        max-width: 100%;
+        /* Wider on small screens */
+    }
+}
+
+.message-row.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message-row.bot {
+    align-self: flex-start;
+}
+
+/* Avatar Styling */
+.avatar {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar.user {
+    background-color: var(--accent);
+    color: white;
+}
+
+.avatar.bot {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+/* Bubble Styling */
+.message-bubble {
+    padding: var(--space-md);
+    border-radius: 1rem;
+    line-height: 1.6;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.message-bubble.user {
+    background-color: var(--accent);
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.message-bubble.bot {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    border-bottom-left-radius: 0.25rem;
+}
+
+.message-bubble.loading {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Citations */
+.citation-block {
+    margin-top: var(--space-md);
+    padding: var(--space-sm);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.citation-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.citation-body {
+    color: var(--text-secondary);
+    font-style: italic;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Input Area */
+.input-area {
+    padding: var(--space-lg);
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.input-box {
+    flex: 1;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    resize: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    height: 24px;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.send-btn {
+    background-color: var(--accent);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.send-btn:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+.send-btn:disabled {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Loading Animation */
+@keyframes loadingDots {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.dot {
+    animation: loadingDots 1.4s infinite;
+    font-size: 1.5rem;
+    line-height: 0.5;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    /* Desktop hidden */
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 40;
+    color: var(--text-primary);
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .input-area {
+        padding: var(--space-md);
+        /* Reduced padding on mobile */
+    }
+}
